@@ -42,12 +42,21 @@ public class FXMLController implements Initializable {
     //Metodo apilar
     @FXML
     private void apilarVehiculo(ActionEvent event) {
-        String plateNumberV = plateNumberTXT.getText();
+    /*    String plateNumberV = plateNumberTXT.getText();
         String brandV = brandTXT.getText();
         int modelV = Integer.parseInt(modelTXT.getText());
 
         pilaVehiculos.apilar(new Vehiculo(plateNumberV, brandV, modelV));
+        */
+        System.out.println("deberia funcionar");
     }
+/*
+    @FXML
+    private void showVehicles(ActionEvent event) {
+        showTXT.setText(pilaVehiculos.toString());
+  */ 
+
+    
 
     //Metodo desaapilar
     //Metodo estaVacia
