@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="implementarpila.FXMLController">
    <children>
       <Label fx:id="titleL" layoutX="292.0" layoutY="14.0" text="Pila">
          <font>
@@ -21,6 +21,7 @@
       <TextField fx:id="brandTXT" layoutX="196.0" layoutY="157.0" />
       <TextField fx:id="modelTXT" layoutX="196.0" layoutY="189.0" />
       <TextArea fx:id="showTXT" layoutX="372.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="button" layoutX="156.0" layoutY="329.0" mnemonicParsing="false" onAction="#apilarVehiculo" text="Button" />
+      <Button layoutX="266.0" layoutY="359.0" mnemonicParsing="false" onAction="#apilarVehiculo" text="Button" />
+      <Button layoutX="437.0" layoutY="282.0" mnemonicParsing="false" onAction="#showVehicles" text="Button" />
    </children>
 </AnchorPane>

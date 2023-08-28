@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import modelo.OperacionesPila;
 import modelo.Pila;
 
 /**
@@ -37,34 +38,41 @@ public class FXMLController implements Initializable {
     private TextArea showTXT;
 
     Pila<Vehiculo> pilaVehiculos;
+      Pila<Vehiculo> pilaDuplicada;
+
 
     //--- EVENTS ---
     //Metodo apilar
     @FXML
     private void apilarVehiculo(ActionEvent event) {
-    /*    String plateNumberV = plateNumberTXT.getText();
+        String plateNumberV = plateNumberTXT.getText();
         String brandV = brandTXT.getText();
         int modelV = Integer.parseInt(modelTXT.getText());
 
         pilaVehiculos.apilar(new Vehiculo(plateNumberV, brandV, modelV));
-        */
-        System.out.println("deberia funcionar");
+
     }
-/*
+
     @FXML
     private void showVehicles(ActionEvent event) {
-        showTXT.setText(pilaVehiculos.toString());
-  */ 
+        showTXT.setText(pilaVehiculos.toString() + "\n"+ pilaDuplicada);
 
-    
+    }
 
-    //Metodo desaapilar
-    //Metodo estaVacia
-    //Metodo mostrar
+    public void _duplicarPila() {
+
+/*        Pila<Vehiculo> pilaDuplicada = OperacionesPila.duplicarPila(pilaVehiculos);
+        System.out.println(pilaDuplicada);*/
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         pilaVehiculos = new Pila<>();
+
+        pilaVehiculos.apilar(new Vehiculo("a", "aa", 1));
+        pilaVehiculos.apilar(new Vehiculo("b", "bb", 2));
+        pilaVehiculos.apilar(new Vehiculo("c", "cc", 3));
+        pilaDuplicada = OperacionesPila.duplicarPila(pilaVehiculos);
     }
 
 }
